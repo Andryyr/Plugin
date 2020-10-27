@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>ru.andryyr.my_plugin</id>
+    <name>Toodle</name>
+    <vendor email="andryyr@gmail.com" url="http://www.github.com/Andryyr">Andrew Chentsov</vendor>
+
+    <description><![CDATA[
+    Plugin for JetBrains IDEs that searchs the selected text in google
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="ToodlesAction" class="ToodlesAction" text="Search in Google"
+                description="Search selected text in google">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
